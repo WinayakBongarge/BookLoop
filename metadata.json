@@ -1,0 +1,5 @@
+{
+  "name": "BookLoop Final",
+  "description": "A responsive web application for a community-based book rental platform where users can lend and rent books from others in their local area.",
+  "requestFramePermissions": []
+}
