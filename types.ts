@@ -15,11 +15,17 @@ export interface Book {
   condition: string;
   pincode: string;
   lenderName: string;
+  lenderPhoneNumber: string;
 }
 
 export interface AppContextType {
-    navigate: (view: string, bookId?: string) => void;
+    navigate: (view: string, data?: string) => void;
     books: Book[];
     setBooks: Dispatch<SetStateAction<Book[]>>;
     view: string;
+    myListedBooks: Book[];
+    myRentedBooks: Book[];
+    addBook: (book: Omit<Book, 'id' | 'rating' | 'distance' | 'lenderName' | 'lenderPhoneNumber' | 'pincode'>) => void;
+    removeListedBook: (bookId: string) => void;
+    returnRental: (bookId: string) => void;
 }
